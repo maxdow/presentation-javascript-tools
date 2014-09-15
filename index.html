@@ -1,158 +1,407 @@
 <!doctype html>
 <html lang="en">
 
-	<head>
-		<meta charset="utf-8">
+<head>
+    <meta charset="utf-8">
 
-		<title>reveal.js - The HTML Presentation Framework</title>
+    <title>Développer avec Javascript - de l'artisanat à l'industrie</title>
 
-		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
-		<meta name="author" content="Hakim El Hattab">
+    <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+    <meta name="author" content="Hakim El Hattab">
 
-		<meta name="apple-mobile-web-app-capable" content="yes" />
-		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<link rel="stylesheet" href="css/reveal.min.css">
-		<link rel="stylesheet" href="css/theme/beige.css" id="theme">
+    <link rel="stylesheet" href="css/reveal.min.css">
+    <link rel="stylesheet" href="css/theme/beige.css" id="theme">
 
-		<!-- For syntax highlighting -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
+    <!-- For syntax highlighting -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
 
-		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
-		<script>
-			if( window.location.search.match( /print-pdf/gi ) ) {
-				var link = document.createElement( 'link' );
-				link.rel = 'stylesheet';
-				link.type = 'text/css';
-				link.href = 'css/print/pdf.css';
-				document.getElementsByTagName( 'head' )[0].appendChild( link );
-			}
-		</script>
+    <!-- If the query includes 'print-pdf', include the PDF print sheet -->
+    <script>
+    if (window.location.search.match(/print-pdf/gi)) {
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = 'css/print/pdf.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+    }
+    </script>
 
-		<style type="text/css">
-			.pull-left {
-				float: left;
-			}
-			.pull-right {
-				float: right;
-			}
-			.inline {
-				display: inline-block;
-			}
-		</style>
+    <style type="text/css">
+    .pull-left {
+        float: left;
+    }
+    .pull-right {
+        float: right;
+    }
+    .inline {
+        display: inline-block;
+    }
+    .reveal h4 {
+        margin: 20px 0 20px 0;
+    }
+    .titre-haut {
+        position: absolute;
+        top: 10px;
+        left: 100px;
+        z-index:500;
+        height:150px
+    }
+    .header1 header:after {
+        font-family:"League Gothic", Impact, sans-serif;
+        font-size:80px;
+        content:"L'age de pierre";
+        background: url("images/pierre.jpg") no-repeat right;
+        width: 900px;
+        height: 200px;
+        position: absolute;
+    }
+    .header2 header:after {
+        font-family:"League Gothic", Impact, sans-serif;
+        font-size:80px;
+        content:"Découverte des outils";
+        background: url("images/marteau.png") no-repeat right;
+        width: 900px;
+        height: 200px;
+        position: absolute;
+    }
+    .header3 header:after {
+        font-family:"League Gothic", Impact, sans-serif;
+        font-size:80px;
+        content:"Un atelier bien rangé";
+        background: url("images/atelier.jpg") no-repeat right;
+        width: 900px;
+        height: 200px;
+        position: absolute;
+    }
+    .header4 header:after {
+        font-family:"League Gothic", Impact, sans-serif;
+        font-size:80px;
+        content:"La Révolution Industrielle";
+        background: url("images/usine.jpg") no-repeat right;
+        width: 900px;
+        height: 200px;
+        position: absolute;
+    }
+    .header5 header:after {
+        font-family:"League Gothic", Impact, sans-serif;
+        font-size:80px;
+        content:"Conquete Spatiale";
+        background: url("images/space.jpg") no-repeat right;
+        width: 900px;
+        height: 200px;
+        position: absolute;
+    }
+    .reveal ul {
+        list-style: none;
+    }
+    .reveal pre {
+        box-shadow: none;
+    }
+    </style>
 
-		<!--[if lt IE 9]>
-		<script src="lib/js/html5shiv.js"></script>
-		<![endif]-->
-	</head>
+    <!--[if lt IE 9]>
+        <script src="lib/js/html5shiv.js"></script>
+        <![endif]-->
+</head>
 
-	<body>
+<body>
 
-		<div class="reveal">
+    <div class="reveal">
+        <header class="titre-haut"></header>
 
-			<!-- Any section element inside of this container is displayed as a slide -->
-			<div class="slides">
+        <!-- Any section element inside of this container is displayed as a slide -->
+        <div class="slides">
 
             <section>
                 <h2>Développer avec Javascript</h2>
                 <h3>de l'artisanat à l'industrie</h3>
-                <img src="images/prehistoire.jpg" class="fragment fade-in" />
+                <div>
+                    <img src="images/prehistoire.jpg" class="fade-in" />
+                </div>
+                <br>
+                <br>
+                <br>
+                <q>Maxime Warnier</q>
+            </section>
+
+            <section data-state="header1">
+
+                <div>
+                    <img src="images/notepad.jpg" class="fragment fade-in" />
+                    <img src="images/alert.png" class="fragment fade-in" />
+                </div>
+
+            </section>
+
+
+            <section data-state="header2">
+                <section>
+                    <h4>Inspecteur & Debugger</h4>
+                    <img src="images/firebug.png" class="fragment fade-in" />
+                    <img src="images/javascript-debugging.png" class="fragment fade-in" />
+                </section>
+
+                <section>
+                    <h4>Bibliothèques DOM</h4>
+
+                    <div class="fragment fade-in">
+                        <img src="images/mootools.png" />
+
+                        <div class="fragment">
+                            <img class="fragment shrink" src="images/jQuery.png" />
+                        </div>
+
+                        <div class="fragment">
+                            <img src="images/danger.jpg" />
+                            <q>Lorsque cela est possible, toujours utiliser les fonctions natives DOM et Js</q>
+                        </div>
+
+                    </div>
+                </section>
+            </section>
+
+
+            <section data-state="header3">
+                <section>
+                    <h4>IDE : Sublime Text</h4>
+                    <img src="images/Sublime-Text2.png" class="fade-in" />
+                </section>
+                <section data-transition="fade-in">
+                    <h4>IDE : WebStorm</h4>
+                    <img src="images/webstorm.png" />
+                </section>
+                <section>
+                    <h4>IDE : Bracket et Atom</h4>
+                    <img width=500 class="pull-left" src="images/bracket.png" />
+                    <img width=500 class="pull-right" src="images/atom.png" />
+                </section>
+                <section>
+                    <h4>Bibliotheques</h4>
+                    <a href="//backbonejs.org"><img src="images/backbone.png" /></a>
+                    <a href="//underscorejs.org"><img src="images/underscore.png" /></a>
+                    <a href="//handlebarsjs.com"><img src="images/handlebars.gif" /></a>
+                </section>
+                <section>
+                    <h4>Modules & chargement asynchrone</h4>
+                    <ul>
+                        <li>CommonJs</li>
+                        <li>AMD</li>
+                        <li><a href="http://requirejs.org">RequireJs</a></li>
+                    </ul>
+                </section>
+                <section>
+                    <h4>Rappel sur les modules</h4>
+                    <h5><a href="http://www.adequatelygood.com/JavaScript-Module-Pattern-In-Depth.html"/> module pattern</a></h5>
+                    <pre>
+                        <code>
+(function () {
+    var $ = this.jQuery;
+
+    this.myExample = function () {};
+}());
+                        </code>
+                    </pre>
+                    <h5>CommonJS</h5>
+                    <pre>
+                        <code>
+var $ = require('jquery');
+exports.myExample = function () {};
+                        </code>
+                    </pre>
+                    <h5>AMD</h5>
+                    <pre>
+                        <code>
+define(['jquery'] , function ($) {
+    return function () {};
+});
+                        </code>
+                    </pre>
+                </section>
+
+            </section>
+
+            <section data-state="header4">
+
+                <section>
+                    <h4>Frameworks</h4>
+                    <a class="fragment" href="//emberjs.com">
+                        <img width=300 src="images/emberjs.png" />
+                    </a>
+                    <a class="fragment" href="//angularjs.org">
+                        <img width=300 src="images/angularjs.png" />
+                    </a>
+                    <a class="fragment" href="//meteor.com">
+                        <img width=300 src="images/meteor.png" />
+                    </a>
+                </section>
+                <section>
+                    <h4>Gestion des dépendances</h4>
+                    <a class="fragment" href="//npmjs.org">
+                        <img class="fragment" src="images/npm.jpg" />
+                    </a>
+                    <a class="fragment" href="//emberjs.com">
+                        <img class="fragment" src="images/bower.jpg" />
+                    </a>
+
+                    <a class="fragment" href="">nodeJs</a>
+
+                </section>
+                <section>
+                    <h4>Systèmes de Build</h4>
+
+                    <div class="fragment">
+                        <a href="//npmjs.org">
+                            <img src="images/npm.jpg" />
+                        </a>
+                    </div>
+                    <div>
+                        <a class="fragment" href="https://github.com/gulpjs/gulp">
+                            <img class="fragment" src="images/gulp.png" />
+                        </a>
+                        <a class="fragment" href="http://gruntjs.com/">
+                            <img class="fragment" src="images/grunt.png" />
+                        </a>
+                    </div>
+                    <div class="fragment">Brunch , brocoli ...</div>
+                    <div class="fragment ">A <a href="http://julienrenaux.fr/2014/05/25/introduction-to-gulp-js-with-practical-examples/">quoi</a> ça <a href="https://www.youtube.com/watch?v=t0kyteLusw4">ressemble </a>?</div>
+                </section>
+                <section>
+                    <h4>Tests : unitaires</h4>
+                    <ul>
+                        <li><a href="http://jasmine.github.io/2.0/introduction.html" class="fragment">Jasmine</a>
+                        </li>
+                        <li><a href="https://qunitjs.com/" class="fragment">QUnit</a>
+                        </li>
+                        <li><a href="http://visionmedia.github.io/mocha/" class="fragment">Mocha</a>
+                        </li>
+                        <li><a href="//sinonjs.org/" class="fragment">Sinon.js</a>
+                        </li>
+                        <li><a href="//karma-runner.github.io" class="fragment">Karma (test runner)</a>
+                        </li>
+                    </ul>
+                </section>
+                <section>
+                    <h4>Tests : API et E2E</h4>
+                    <ul>
+                        <li><a href="https://github.com/angular/protractor" class="fragment"> Protractor (WebDriverJS + Selenium )</a>
+                        </li>
+                        <li><a href="frisbyjs.com" class="fragment">Frisby.js </a><a class="fragment" href="https://github.com/visionmedia/supertest">SuperTest </a>
+                        </li>
+                    </ul>
+
+                </section>
+                <section>
+                    <h4>Scaffolding</h4>
+                    <a href="//yeoman.io">
+                        <img src="images/yeoman.png" />
+                    </a>
+                    <a href="https://github.com">
+                        <img src="images/github.png" />
+                    </a>
+                </section>
+
+
+            </section>
+
+
+            <section data-state="header5">
+                <ul>
+
+                    <li><a href="https://github.com/lukehoban/es6features" class="fragment">Ecmascript6</a>
+                    </li>
+                    <li>
+                        <a href="browserify.org" class="fragment">
+                            <img src="images/browserify.jpg" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://facebook.github.io/react/" class="fragment">
+                            <img src="images/react.png" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://webcomponents.org/" class="fragment">
+                            <img src="http://webcomponents.org/img/logo.svg" alt="WebComponents.org" width="246" height="158">
+                        </a>
+                    </li>
+                </ul>
             </section>
 
             <section>
-            	<div>
-                <h2 class="inline">L'age de pierre</h2>
-            		<img style="margin-left: 50px" src="images/pierre.jpg" class="inline right">
-            	</div>
-            	<div>
-                	<img src="images/notepad.jpg" class="fragment fade-in" />
-                	<img src="images/alert.png" class="fragment fade-in" />
-            	</div>
+                <h1>Merci</h1>
+                <h2>Des questions ?</h2>
 
             </section>
 
 
-            <section>
-            	<div>
-                <h2 class="inline">Découverte des outils</h2>
-            		<img width="120" style="margin-left: 50px" src="images/marteau.png" class="inline right">
-            	</div>
-            	<div>
-                	<img src="images/firebug.png" class="fragment fade-in" />
 
-                	<div class="fragment fade-in">
-                		<img src="images/jQuery.png" />
-                		<img src="images/mootools.png" />
-                		<h2>...</h2>
-                	</div>
+        </div>
 
-            	</div>
+    </div>
 
-            </section>
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.min.js"></script>
 
+    <script>
+    // Full list of configuration options available here:
+    // https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+        height: "80%",
+        controls: true,
+        progress: true,
+        history: true,
+        center: false,
 
-            <section>
-            	<div>
-                <h2 class="inline">Le bricolage ordonné</h2>
-            		<img style="margin-left: 50px" src="images/atelier.jpg" class="inline right">
-            	</div>
-            	<div>
-                	<img src="images/notepad.jpg" class="fragment fade-in" />
-                	<img src="images/alert.png" class="fragment fade-in" />
-            	</div>
-http://video.esri.com/watch/3294/javascript-tooling-love-your-development-workflow
-https://github.com/dypsilon/frontend-dev-bookmarks
-https://dl.dropboxusercontent.com/u/39519/talks/jquk-tooling%2Bappstack/index.html
-            </section>
+        theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+        transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
 
+        // Parallax scrolling
+        // parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+        // parallaxBackgroundSize: '2100px 900px',
 
+        // Optional libraries used to extend on reveal.js
+        dependencies: [{
+            src: 'lib/js/classList.js',
+            condition: function() {
+                return !document.body.classList;
+            }
+        }, {
+            src: 'plugin/markdown/marked.js',
+            condition: function() {
+                return !!document.querySelector('[data-markdown]');
+            }
+        }, {
+            src: 'plugin/markdown/markdown.js',
+            condition: function() {
+                return !!document.querySelector('[data-markdown]');
+            }
+        }, {
+            src: 'plugin/highlight/highlight.js',
+            async: true,
+            callback: function() {
+                hljs.initHighlightingOnLoad();
+            }
+        }, {
+            src: 'plugin/zoom-js/zoom.js',
+            async: true,
+            condition: function() {
+                return !!document.body.classList;
+            }
+        }, {
+            src: 'plugin/notes/notes.js',
+            async: true,
+            condition: function() {
+                return !!document.body.classList;
+            }
+        }]
+    });
+    </script>
 
+</body>
 
-
-
-
-
-
-
-			</div>
-
-		</div>
-
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.min.js"></script>
-
-		<script>
-
-			// Full list of configuration options available here:
-			// https://github.com/hakimel/reveal.js#configuration
-			Reveal.initialize({
-				height: "100%",
-				controls: true,
-				progress: true,
-				history: true,
-				center: false,
-
-				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
-
-				// Parallax scrolling
-				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
-				// parallaxBackgroundSize: '2100px 900px',
-
-				// Optional libraries used to extend on reveal.js
-				dependencies: [
-					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
-					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
-				]
-			});
-
-		</script>
-
-	</body>
 </html>
