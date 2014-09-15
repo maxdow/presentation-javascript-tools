@@ -48,7 +48,6 @@
         position: absolute;
         top: 10px;
         left: 100px;
-        z-index:500;
         height:150px
     }
     .header1 header:after {
@@ -56,7 +55,7 @@
         font-size:80px;
         content:"L'age de pierre";
         background: url("images/pierre.jpg") no-repeat right;
-        width: 900px;
+        width: 940px;
         height: 200px;
         position: absolute;
     }
@@ -65,7 +64,7 @@
         font-size:80px;
         content:"Découverte des outils";
         background: url("images/marteau.png") no-repeat right;
-        width: 900px;
+        width: 940px;
         height: 200px;
         position: absolute;
     }
@@ -74,8 +73,8 @@
         font-size:80px;
         content:"Un atelier bien rangé";
         background: url("images/atelier.jpg") no-repeat right;
-        width: 900px;
-        height: 200px;
+        width: 940px;
+        height: 180px;
         position: absolute;
     }
     .header4 header:after {
@@ -83,7 +82,7 @@
         font-size:80px;
         content:"La Révolution Industrielle";
         background: url("images/usine.jpg") no-repeat right;
-        width: 900px;
+        width: 940px;
         height: 200px;
         position: absolute;
     }
@@ -92,7 +91,14 @@
         font-size:80px;
         content:"Conquete Spatiale";
         background: url("images/space.jpg") no-repeat right;
-        width: 900px;
+        width: 940px;
+        height: 200px;
+        position: absolute;
+    }
+    .header6 header:after {
+        background: url("images/nodejs.png") no-repeat;
+        content: "";
+        width: 940px;
         height: 200px;
         position: absolute;
     }
@@ -132,7 +138,7 @@
             <section data-state="header1">
 
                 <div>
-                    <img src="images/notepad.jpg" class="fragment fade-in" />
+                    <img src="images/notepad.jpg" class="fragment fade-in pull-left" />
                     <img src="images/alert.png" class="fragment fade-in" />
                 </div>
 
@@ -225,7 +231,7 @@ define(['jquery'] , function ($) {
 
             </section>
 
-            <section data-state="header4">
+            <section data-state="header4" id="usine">
 
                 <section>
                     <h4>Frameworks</h4>
@@ -234,11 +240,12 @@ define(['jquery'] , function ($) {
                     </a>
                     <a class="fragment" href="//angularjs.org">
                         <img width=300 src="images/angularjs.png" />
-                    </a>
+                    </a><a href="#/angularjs"></a>
                     <a class="fragment" href="//meteor.com">
                         <img width=300 src="images/meteor.png" />
                     </a>
                 </section>
+
                 <section>
                     <h4>Gestion des dépendances</h4>
                     <a class="fragment" href="//npmjs.org">
@@ -247,8 +254,9 @@ define(['jquery'] , function ($) {
                     <a class="fragment" href="//emberjs.com">
                         <img class="fragment" src="images/bower.jpg" />
                     </a>
-
-                    <a class="fragment" href="">nodeJs</a>
+                    <div>
+                        <a class="fragment" href="#/nodejs">nodeJs</a>
+                    </div>
 
                 </section>
                 <section>
@@ -338,7 +346,43 @@ define(['jquery'] , function ($) {
 
             </section>
 
-
+            <section data-state="header6" id="nodejs">
+                <ul>
+                    <li class="fragment">Plateforme de développement Javascript</li>
+                    <li class="fragment">Machine Virtual V8</li>
+                    <li class="fragment">Libre (MIT) , grande communauté</li>
+                    <li class="fragment">Model évenementiel (non bloquant ) </li>
+                    <li class="fragment">Npm</li>
+                    <li class="fragment">Ecosystème cohérent (frontend / backend)</li>
+                </ul>
+                <pre class="fragment">
+                    <code>
+var http = require('http');
+http.createServer(function (req, res) {
+  res.writeHead(200, {'Content-Type': 'text/plain'});
+  res.end('Hello World\n');
+}).listen(1337, '127.0.0.1');
+console.log('Server running at http://127.0.0.1:1337/');
+                    </code>
+                </pre>
+                <a href="#/4/1">retour</a>
+            </section>
+            <section id="angularJs">
+            <h2>Un mot sur angularJs</h2>
+            <img width=50 class="pull-left" src="images/angularjs.png" />
+            <ul>
+                <li class="fragment">Framework web type SPA</li>
+                <li class="fragment">Licence MIT, poussé par Google</li>
+                <li class="fragment">Idée de base : étendre le HTML</li>
+                <li class="fragment">Architecture MV*</li>
+                <li class="fragment"><a href="http://maxdow.github.io/Introduction-Angularjs-ToulouseJs/#/4">Data-binding bidirectionnel</a></li>
+                <li class="fragment">Services et injection de dépendance</li>
+                <li class="fragment">Routage</li>
+                <li class="fragment">Modules et Test</li>
+                <li class="fragment">Directives</li>
+            </ul>
+            <a href="#/usine">retour</a>
+            </section>
 
         </div>
 
@@ -351,7 +395,7 @@ define(['jquery'] , function ($) {
     // Full list of configuration options available here:
     // https://github.com/hakimel/reveal.js#configuration
     Reveal.initialize({
-        height: "80%",
+        height: "75%",
         controls: true,
         progress: true,
         history: true,
