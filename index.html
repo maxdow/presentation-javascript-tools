@@ -150,24 +150,26 @@
                     <h4>Inspecteur & Debugger</h4>
                     <img src="images/firebug.png" class="fragment fade-in" />
                     <img src="images/javascript-debugging.png" class="fragment fade-in" />
+                    <a class="fragment" href="https://developer.chrome.com/devtools">https://developer.chrome.com/devtools</a>
                 </section>
 
                 <section>
                     <h4>Bibliothèques DOM</h4>
 
-                    <div class="fragment fade-in">
-                        <img src="images/mootools.png" />
+
+                        <img class="fragment" src="images/mootools.png" />
+
+                        <img class="fragment" src="images/extjs.jpg" />
 
                         <div class="fragment">
+                            <span class="fragment">...</span>
                             <img class="fragment shrink" src="images/jQuery.png" />
                         </div>
-
                         <div class="fragment">
                             <img src="images/danger.jpg" />
                             <q>Lorsque cela est possible, toujours utiliser les fonctions natives DOM et Js</q>
                         </div>
 
-                    </div>
                 </section>
             </section>
 
@@ -176,6 +178,12 @@
                 <section>
                     <h4>IDE : Sublime Text</h4>
                     <img src="images/Sublime-Text2.png" class="fade-in" />
+                </section>
+                <section>
+                    <img src="images/sublimetxt.gif" alt="">
+                </section>
+                <section>
+                    <img src="images/sublimetxt2.gif" alt="">
                 </section>
                 <section data-transition="fade-in">
                     <h4>IDE : WebStorm</h4>
@@ -188,21 +196,21 @@
                 </section>
                 <section>
                     <h4>Bibliotheques</h4>
-                    <a href="//backbonejs.org"><img src="images/backbone.png" /></a>
-                    <a href="//underscorejs.org"><img src="images/underscore.png" /></a>
-                    <a href="//handlebarsjs.com"><img src="images/handlebars.gif" /></a>
+                    <a class="fragment" href="//backbonejs.org"><img src="images/backbone.png" /></a>
+                    <a class="fragment" href="//underscorejs.org"><img src="images/underscore.png" /></a>
+                    <a class="fragment" href="//handlebarsjs.com"><img src="images/handlebars.gif" /></a>
                 </section>
                 <section>
                     <h4>Modules & chargement asynchrone</h4>
                     <ul>
                         <li>CommonJs</li>
                         <li>AMD</li>
-                        <li><a href="http://requirejs.org">RequireJs</a></li>
+                        <li class="fragment"><a href="http://requirejs.org">RequireJs</a></li>
                     </ul>
                 </section>
                 <section>
                     <h4>Rappel sur les modules</h4>
-                    <h5><a href="http://www.adequatelygood.com/JavaScript-Module-Pattern-In-Depth.html"/> module pattern</a></h5>
+                    <div class="fragment"><h5><a href="http://www.adequatelygood.com/JavaScript-Module-Pattern-In-Depth.html"/> module pattern</a></h5>
                     <pre>
                         <code>
 (function () {
@@ -211,22 +219,22 @@
     this.myExample = function () {};
 }());
                         </code>
-                    </pre>
-                    <h5>CommonJS</h5>
+                    </pre></div>
+                    <div class="fragment"><h5>CommonJS</h5>
                     <pre>
                         <code>
 var $ = require('jquery');
 exports.myExample = function () {};
                         </code>
-                    </pre>
-                    <h5>AMD</h5>
+                    </pre></div>
+                    <div class="fragment"><h5>AMD</h5>
                     <pre>
                         <code>
 define(['jquery'] , function ($) {
     return function () {};
 });
                         </code>
-                    </pre>
+                    </pre></div>
                 </section>
 
             </section>
@@ -238,9 +246,9 @@ define(['jquery'] , function ($) {
                     <a class="fragment" href="//emberjs.com">
                         <img width=300 src="images/emberjs.png" />
                     </a>
-                    <a class="fragment" href="//angularjs.org">
+                    <div class="inline fragment"><a href="//angularjs.org">
                         <img width=300 src="images/angularjs.png" />
-                    </a><a href="#/angularjs"></a>
+                    </a><a href="#/angularjs">+</a></div>
                     <a class="fragment" href="//meteor.com">
                         <img width=300 src="images/meteor.png" />
                     </a>
@@ -279,6 +287,15 @@ define(['jquery'] , function ($) {
                     <div class="fragment ">A <a href="http://julienrenaux.fr/2014/05/25/introduction-to-gulp-js-with-practical-examples/">quoi</a> ça <a href="https://www.youtube.com/watch?v=t0kyteLusw4">ressemble </a>?</div>
                 </section>
                 <section>
+                    <h4>Scaffolding</h4>
+                    <a href="//yeoman.io">
+                        <img src="images/yeoman.png" />
+                    </a>
+                    <a href="https://github.com">
+                        <img src="images/github.png" />
+                    </a>
+                </section>
+                <section>
                     <h4>Tests : unitaires</h4>
                     <ul>
                         <li><a href="http://jasmine.github.io/2.0/introduction.html" class="fragment">Jasmine</a>
@@ -303,17 +320,6 @@ define(['jquery'] , function ($) {
                     </ul>
 
                 </section>
-                <section>
-                    <h4>Scaffolding</h4>
-                    <a href="//yeoman.io">
-                        <img src="images/yeoman.png" />
-                    </a>
-                    <a href="https://github.com">
-                        <img src="images/github.png" />
-                    </a>
-                </section>
-
-
             </section>
 
 
@@ -343,6 +349,7 @@ define(['jquery'] , function ($) {
             <section>
                 <h1>Merci</h1>
                 <h2>Des questions ?</h2>
+                <img src="images/question.gif" alt="">
 
             </section>
 
@@ -351,7 +358,7 @@ define(['jquery'] , function ($) {
                     <li class="fragment">Plateforme de développement Javascript</li>
                     <li class="fragment">Machine Virtual V8</li>
                     <li class="fragment">Libre (MIT) , grande communauté</li>
-                    <li class="fragment">Model évenementiel (non bloquant ) </li>
+                    <li class="fragment">Model évenementiel (non bloquant) </li>
                     <li class="fragment">Npm</li>
                     <li class="fragment">Ecosystème cohérent (frontend / backend)</li>
                 </ul>
@@ -365,23 +372,22 @@ http.createServer(function (req, res) {
 console.log('Server running at http://127.0.0.1:1337/');
                     </code>
                 </pre>
-                <a href="#/4/1">retour</a>
+                <a class="fragment" href="#/4/1">retour</a>
             </section>
-            <section id="angularJs">
+            <section id="angularjs">
             <h2>Un mot sur angularJs</h2>
             <img width=50 class="pull-left" src="images/angularjs.png" />
             <ul>
                 <li class="fragment">Framework web type SPA</li>
                 <li class="fragment">Licence MIT, poussé par Google</li>
-                <li class="fragment">Idée de base : étendre le HTML</li>
+                <li class="fragment">Idée de base : étendre le HTML ( Directives )</li>
                 <li class="fragment">Architecture MV*</li>
+                <li class="fragment">Modules et Test</li>
                 <li class="fragment"><a href="http://maxdow.github.io/Introduction-Angularjs-ToulouseJs/#/4">Data-binding bidirectionnel</a></li>
                 <li class="fragment">Services et injection de dépendance</li>
                 <li class="fragment">Routage</li>
-                <li class="fragment">Modules et Test</li>
-                <li class="fragment">Directives</li>
             </ul>
-            <a href="#/usine">retour</a>
+            <a class="fragment" href="#/usine">retour</a>
             </section>
 
         </div>
